@@ -71,8 +71,8 @@
 
         .imgcontainer {
             background-image: linear-gradient(115deg,
-                    rgba(113, 76, 148, 0.8),
-                    rgba(179, 128, 236, 0.877))
+                    rgba(156, 51, 255, 0.918),
+                    rgba(159, 74, 255, 0.877))
         }
 
         .one-more {
