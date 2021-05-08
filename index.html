@@ -12,6 +12,9 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+      :root{
+        --color-darkblue: #1b1b32;
+      }
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -35,6 +38,7 @@
       margin-left: 15%;
       margin-top: 5%;
       align-items: center;
+      justify-content: stretch;
     }
 
     body {
@@ -42,8 +46,11 @@
     }
 
     .image {
-      height: 374px;
-      width: auto;
+        background: hsl(259°, 37%, 48%);
+        z-index: 1;
+        /* height: 375px;
+        width: auto; */
+        opacity: 0.5;
     }
 
     .insights {
@@ -53,9 +60,24 @@
     .main-text {
       display: flex;
       flex-direction: column;
-      background-color:#1d2352;
-      /* margin-top: 20px; */
+      background:#fff;
+      background: hsl(244, 38%, 16%);
+      line-height: 1.5;
       padding: 30px;
+      align-self: stretch;
+      
+    }
+    .main-text h1{
+        padding: 0 40px;
+    }
+
+    .imgcontainer{
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        align-self: stretch;
+        /* background: url('./images/image-header-desktop.jpg'); */
     }
 
     .one-more {
@@ -67,13 +89,7 @@
       text-align: center;
       padding: calc(200px / 12);
     }
-
-    div .imgcontainer {
-      background-color: violet;
-      opacity: 0.3;
-      z-index: 1;
-      
-    }
+       
     @media screen and (max-width: 575px){
       .main-box{
         flex-direction: column-reverse;
@@ -85,8 +101,7 @@
         flex-direction: column;
       }
       .image{
-        width: 100%;
-        height: auto;
+        position: relative;
       }
       .main-text{
         text-align: center;
@@ -120,7 +135,10 @@
       </div>
     </div>
     <div class="imgcontainer">
-      <img src="images\image-header-desktop.jpg" class="image">
+        <img class="image"
+        src = './images/image-header-desktop.jpg'
+        >
+        <!-- <div class="image"></div> -->
     </div>
   </div>
 
