@@ -47,9 +47,9 @@
         .image {
             background: hsl(259°, 37%, 48%);
             z-index: 1;
-            height: auto;
+            /* width: auto; */
             opacity: 0.5;
-            flex-shrink: 2;
+            /* flex-shrink: 2; */
         }
 
         .insights {
@@ -64,25 +64,15 @@
             line-height: 1.5;
             padding: 30px;
             align-self: stretch;
-            width: 400px;
 
         }
 
-        #heading {
-            padding-left: 60px;
-            padding-right: 60px;
-        }
+
 
         .imgcontainer {
-            position: relative;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            align-self: stretch;
-            background: var(--color-darkblue);
             background-image: linear-gradient(115deg,
                     rgba(113, 76, 148, 0.8),
-                    rgba(180, 145, 221, 0.877))
+                    rgba(179, 128, 236, 0.877))
         }
 
         .one-more {
@@ -92,22 +82,36 @@
 
         .lbox {
             text-align: center;
-            padding: calc(100px/12);
-        }
-        .lbox:first-of-type{
-            margin-left: 60px;
+            padding: calc(150px/12);
+            line-height: 1;
         }
 
-        #text {
-            padding-left: 60px;
-            padding-right: 60px;
+
+
+
+        @media screen and (min-width: 575px) {
+            .lbox:first-of-type {
+                margin-left: 40px;
+            }
+
+            #text {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            #heading {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
         }
+
 
         @media screen and (max-width: 575px) {
             .main-box {
                 flex-direction: column-reverse;
                 margin: 10%;
-                justify-items: center;
+                justify-content: flex-start;
+                align-items: flex-start;
                 border-radius: 15%;
             }
 
@@ -115,14 +119,23 @@
                 flex-direction: column;
             }
 
+            .imgcontainer {
+                /* width: 100%; */
+                justify-self: center;
+            }
+
             .image {
-                position: relative;
+                width: 100%;
             }
 
             .main-text {
                 text-align: center;
             }
 
+            .lbox {
+                text-align: center;
+                padding: calc(100px/12);
+            }
         }
     </style>
 </head>
