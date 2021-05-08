@@ -2,151 +2,165 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Stats preview card component</title>
+    <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-      :root{
-        --color-darkblue: #1b1b32;
-      }
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      background-color: blueviolet;
-      color: white;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+    <style>
+        :root {
+            --color-darkblue: #1b1b32;
+        }
 
-    .attribution a {
-      color: white;
-      font-style: normal;
-    }
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
-    .main-box {
-      display: flex;
-      color: white;
-      margin-right: 15%;
-      margin-left: 15%;
-      margin-top: 5%;
-      align-items: center;
-      justify-content: stretch;
-    }
+        .attribution a {
+            color: white;
+            font-style: normal;
+        }
 
-    body {
-      background-color: black;
-    }
+        .main-box {
+            display: flex;
+            color: white;
+            margin-right: 10%;
+            margin-left: 10%;
+            margin-top: 5%;
+            align-items: center;
+            justify-content: stretch;
+        }
 
-    .image {
-        background: hsl(259°, 37%, 48%);
-        z-index: 1;
-        /* height: 375px;
-        width: auto; */
-        opacity: 0.5;
-    }
+        body {
+            background-color: black;
+        }
 
-    .insights {
-      color: blueviolet;
-    }
+        .image {
+            background: hsl(259°, 37%, 48%);
+            z-index: 1;
+            height: auto;
+            opacity: 0.5;
+            flex-shrink: 2;
+        }
 
-    .main-text {
-      display: flex;
-      flex-direction: column;
-      background:#fff;
-      background: hsl(244, 38%, 16%);
-      line-height: 1.5;
-      padding: 30px;
-      align-self: stretch;
-      
-    }
-    .main-text h1{
-        padding: 0 40px;
-    }
+        .insights {
+            color: blueviolet;
+        }
 
-    .imgcontainer{
-        position: relative;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        align-self: stretch;
-        /* background: url('./images/image-header-desktop.jpg'); */
-    }
+        .main-text {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            background: hsl(244, 38%, 16%);
+            line-height: 1.5;
+            padding: 30px;
+            align-self: stretch;
+            width: 400px;
 
-    .one-more {
-      display: flex;
-      text-align: center;
-    }
+        }
 
-    .lbox {
-      text-align: center;
-      padding: calc(200px / 12);
-    }
-       
-    @media screen and (max-width: 575px){
-      .main-box{
-        flex-direction: column-reverse;
-        margin: 10%;
-        justify-items: center;
-        border-radius: 15%;
-      }
-      .one-more{
-        flex-direction: column;
-      }
-      .image{
-        position: relative;
-      }
-      .main-text{
-        text-align: center;
-      }
-    }
-  </style>
+        #heading {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .imgcontainer {
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            align-self: stretch;
+            background: var(--color-darkblue);
+            background-image: linear-gradient(115deg,
+                    rgba(113, 76, 148, 0.8),
+                    rgba(180, 145, 221, 0.877))
+        }
+
+        .one-more {
+            display: flex;
+            text-align: center;
+        }
+
+        .lbox {
+            text-align: center;
+            padding: calc(100px/12);
+        }
+        .lbox:first-of-type{
+            margin-left: 60px;
+        }
+
+        #text {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @media screen and (max-width: 575px) {
+            .main-box {
+                flex-direction: column-reverse;
+                margin: 10%;
+                justify-items: center;
+                border-radius: 15%;
+            }
+
+            .one-more {
+                flex-direction: column;
+            }
+
+            .image {
+                position: relative;
+            }
+
+            .main-text {
+                text-align: center;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class='main-box'>
-    <div class="main-text">
-      <h2>Get <span class="insights">insights</span> that help your business grow.</h2>
+    <div class='main-box'>
+        <div class="main-text">
+            <h2 id="heading">Get <span class="insights">insights</span> that help your business grow.</h2>
 
-      <p> Discover the benefits of data analytics and make better decisions regarding revenue, customer
-        experience, and overall efficiency.</p>
+            <p id="text"> Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                experience, and overall efficiency.</p>
 
-      <div class="one-more">
-        <div class="lbox">
-          <h2>10k+</h2>
-          <p>COMPANIES</p>
+            <div class="one-more">
+                <div class="lbox">
+                    <h2>10k+</h2>
+                    <p>COMPANIES</p>
+                </div>
+                <div class="lbox">
+                    <h2>314</h2>
+                    <p>TEMPLATES</p>
+                </div>
+                <div class="lbox">
+                    <h2>12M+</h2>
+                    <p>QUERIES</p>
+                </div>
+            </div>
         </div>
-        <div class="lbox">
-          <h2>314</h2>
-          <p>TEMPLATES</p>
+        <div class="imgcontainer">
+            <img class="image" src='./images/image-header-desktop.jpg'>
         </div>
-        <div class="lbox">
-          <h2>12M+</h2>
-          <p>QUERIES</p>
-        </div>
-      </div>
     </div>
-    <div class="imgcontainer">
-        <img class="image"
-        src = './images/image-header-desktop.jpg'
-        >
-        <!-- <div class="image"></div> -->
-    </div>
-  </div>
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    <br />
-    Coded with ❤ by <a href="#">Pradeepa</a>.
-  </footer>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        <br />
+        Coded with &#10084; by <a href="#">Pradeepa</a>.
+    </footer>
 </body>
 
 </html>
