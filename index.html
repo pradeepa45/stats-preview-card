@@ -17,13 +17,14 @@
         .attribution {
             font-size: 11px;
             text-align: center;
-            background-color: blueviolet;
+            background-color: black;
             color: white;
             padding: 20px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+
 
         .attribution a {
             color: white;
